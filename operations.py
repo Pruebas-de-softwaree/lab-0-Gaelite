@@ -47,5 +47,23 @@ if __name__ == "__main__":
     except ZeroDivisionError as e:
         print("Error esperado:", e)
 
+    print("La potencia de 2 elevado a 3 deberia ser 8, resultado: ", power(2, 3))
+    try:
+        print("La potencia de 2 elevado a -3 deberia dar error, resultado: ", power(2, -3))
+    except TypeError as e:
+        print("Error esperado:", e)
+    
+    print("La raiz cuadrada de 4 deberia ser 2, resultado: ", square_root(4))
+    try:
+        print("La raiz cuadrada de -4 deberia dar error, resultado: ", square_root(-4))
+    except ValueError as e:
+        print("Error esperado:", e)
+
+    print("El promedio de [1, 2, 3, 4] deberia ser 2.5, resultado: ", average([1, 2, 3, 4]))
+    print("El promedio de [1, 2, 3, 4, 5] deberia ser 3, resultado: ", average([1, 2, 3, 4, 5]))
+
+    print("El maximo de [1, 2, 3, 4] deberia ser 4, resultado: ", maximum([1, 2, 3, 4]))
+    print("El maximo de [1, 2, 3, 4, -5] deberia ser 4, resultado: ", maximum([1, 2, 3, 4,- 5]))
+
     print("end test")
 
